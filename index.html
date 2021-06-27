@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <script src="https://kit.fontawesome.com/b190e78946.js" crossorigin="anonymous"></script> -->
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    
+    <img id = 'menu-button' class = "click" src="./hamburger.png" alt="">
+
+<div class="full">
+    <menu class="top-overlay">
+        <img id = 'menu-button' class = "close-menu" src="./cancel.png" alt="">
+    </menu>
+
+     <menu class="middle-overlay"></menu>
+    <menu class="bottom-overlay"></menu>
+
+    <div class="nav-content">
+        <ul>
+            <li><a id = 'home-link-btn' class = "underline-animation" href="#">Home</a></li>
+            <li><a id = 'projects-link-btn' class = "underline-animation" href="#projects-section">Projects</a></li>
+            <li><a id = 'contact-link-btn' class = "underline-animation" href="#contact-section">Contact</a></li>
+        </ul>
+    </div>
+</div>
+
+    <header class = "header">
+        <div class="header-content-box">
+            <div class="name-title">
+                <h3>HÍ There. I'm</h3>
+                
+                <h1 class = "name">NABAJIT SARMAH</h1>
+                <h1 class = "frontend" >FRONT END <span>DEVELOPER</span> </h1>
+            </div>
+
+        
+            <a class = "hover-btns resume" href="#">Resumè</a>  
+        </div>
+    </header>
+
+
+    
+    <section id = "projects-section" class="projects-section">
+        <div class="common-div projects-heading-container">
+            <a href="#" class = "common-heading projects-heading">Projects</a>
+        </div>
+
+        <div class="container">
+            
+            <div class="project project-1">
+                <div class="project-image-div">
+                    <img src="./recipeappproject.png" alt="">
+                </div>
+                <div class="project-description">
+                    <h4 class="project-title">Food Queries App</h4>
+                    <p>A food recipes app which uses an api to search and display foods based on the search by the user.</p>
+                    <div class="center-a-links">
+                        <a class = 'hover-btns' href="#">live demo</a>
+                        <a class = 'hover-btns' href="#">git repo</a>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="project project-2">
+                <div class="project-image-div">
+                    <img src="./tictactoeproject.png" alt="">
+                </div>
+                <div class="project-description">
+                        <h4 class="project-title">A Generic Board Game</h4>
+                        <p>Generic TicTacToe game where two players can play amongst each other ioef iksvoliwr ikwwhiro ishdd.</p>
+                        <div class="center-a-links">
+                            <a class = 'hover-btns' href="#">live demo</a>
+                            <a class = 'hover-btns' href="#">git repo</a>
+                        </div>
+                 </div>
+            </div>
+            
+
+            <div class="project project-3">
+                <div class="project-image-div">
+                    <img src="./countdownproject.png" alt="">
+                </div>
+                <div class="project-description">
+                        <h4 class="project-title">Countdown Timer</h4>
+                        <p>Simple Countdown Timer in Javascript to make sure no one forgets my birthday ever again! ifdiofdi. 😞😞  </p>
+                        <div class="center-a-links">
+                            <a class = 'hover-btns' href="#">live demo</a>
+                            <a class = 'hover-btns' href="#">git repo</a>
+                        </div>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+
+    <section class = "about-section">
+        <div class="common-div aboutme-heading-container">
+            <a class = "common-heading aboutme-heading" href="#">About me</a>
+        </div>
+        <div class="about-text">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora dolore aperiam quisquam, exercitationem deleniti cumque magnam doloribus nisi quasi odit doloremque, voluptatem inventore repudiandae consectetur incidunt temporibus molestias dignissimos vitae?</p>
+        </div>
+    </section>
+
+
+    <section id = "contact-section" class="contact-section">
+        <div class="common-div aboutme-heading-container">
+            <a class = "common-heading aboutme-heading" href="#">Contact me</a>
+        </div>
+
+        <div class="container contact-me-container">
+            <form >
+            <div class="input-div">
+                <div class="input-row">
+                    <label for="input-name">Your Name</label>
+                    <input id = "input-name" name="input-name" type="text" placeholder="Enter your name">
+                </div>
+
+                <div class="input-row">
+                    <label for="email">Your Email</label>
+                    <input type="email" id = "email" name="email" placeholder="Enter your email">
+                </div>
+            </div> 
+
+                <div class="message-div">
+                    <label for="message">Your Message</label>
+                    <textarea name="message" id="message"  rows="2"></textarea>
+                </div>
+
+                <div class="submit-btn-div">
+                    <button class = "submit-btn" type="submit">Submit</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <footer class = "footer">
+        <h5>Copyright ©  Nabajit Sarmah. Designed And Coded By Stackoverflow .</h5>
+    </footer>
+
+    <script src = "script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,497 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500&display=swap');
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+body{
+    background-color: rgb(243, 243, 243);
+    color: black;
+    font-family: 'Roboto Mono';
+}
+
+/* .full{
+    height: 100vh;
+    position: absolute;
+    z-index: 11;
+} */
+
+
+.top-overlay, .middle-overlay, .bottom-overlay{
+    height: 33.5vh;
+    background-color: #2b2934;
+    position: fixed;
+    width: 0;
+    overflow: hidden;
+    transition: width 1.2s ease-in-out;
+    transition-delay: .2s;
+    border: none;
+    z-index: 10;
+}
+
+
+.top-overlay{
+    top: 0;
+    left: 0;
+}
+
+.middle-overlay{
+    top: 33.333333vh;
+    right: 0;
+}
+
+.bottom-overlay{
+    top: 66.6666666vh;
+    left: 0;
+}
+
+.make-overlay-fullscreen{       
+    width: 100%;
+  }
+
+
+
+/*Navbar and navlinks i.e text ul li a */
+
+ .nav-content{
+    position: fixed;
+    padding: 2rem;
+    width: 520px;
+    left: 50%;
+    transform: translate(-50%, -60%);
+    top: -250px;
+    z-index: 12;
+    font-family: sans-serif;
+}
+
+
+ul{
+    display: flex;
+    justify-content: space-between;
+}
+
+ul li{
+    list-style-type: none;
+    margin-top: 4rem;
+}
+
+ul li a{
+    color: white;
+    font-size: 2rem;
+    letter-spacing: .2rem; 
+}
+
+
+
+
+/* Underline animation on the navlinks start*/
+.underline-animation, .common-heading{
+    display: inline-block;
+    position: relative;
+ }
+
+.underline-animation::after , .common-heading::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    transform-origin: bottom right;
+    transition: transform 0.4s ease-out;
+}
+
+.underline-animation:hover::after, .common-heading:hover::after{
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+
+/* Underline animation on the navlinks end*/
+
+
+
+.nav-slidein-fromtop{
+    animation: slide 2s both;
+    animation-delay: .2s;
+    animation-direction: normal;
+}
+
+.nav-slideback{
+    animation: return 2s both;
+     animation-delay: .3s;
+    animation-direction: normal;
+}
+
+
+@keyframes slide{
+    0%{
+        top : -250px;
+    }
+
+    100%{
+        top : 45%
+    }
+}
+
+
+@keyframes return{
+    0%{
+        top : 45%;
+    }
+
+    100%{
+        top : -250px;
+    }
+}
+
+@media (max-width: 550px){
+    ul{
+        flex-direction: column;
+        text-align: center;
+    }
+    .nav-content{
+        width: 80%;
+    }
+} 
+
+
+
+
+/* --------------------------------- hamburger menu and close --------------------------------------*/
+#menu-button{                                        
+    height: 30px;           
+    cursor: pointer;
+    z-index: 10;
+}
+
+.click{
+    position: fixed;
+    left: 20px;
+    top: 20px;
+}
+
+.close-menu{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+
+/* --------------------------------- Header Start--------------------------------*/
+
+.header{
+    height: 97vh;
+    background-color: #00C899;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 83%);
+    letter-spacing: 2.5px;
+    color: #2b2934;
+}
+
+.header h1{
+    font-size: 2.8rem; /* make 2.8rem */
+    font-family: 'Montserrat';
+    padding-bottom: .5rem;
+}
+
+
+.header-content-box{
+    margin-bottom: 35vh;
+    
+}
+
+.header .name{
+    margin-top: 1.2rem;
+}
+
+
+.resume{
+    background-color: rgb(255, 255, 255);
+    position: relative;
+    top: 45px;
+    padding: 11px 15px;
+    border-radius: 40px;
+}
+
+.hover-btns{
+    letter-spacing: 1px;
+    transition: box-shadow .2s ease-in-out;         /* This and next hover commmon in projects section links */
+}
+
+.hover-btns:hover{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+@media (max-width: 550px){
+    .header h1{
+        font-size: 1.7rem;
+    }
+    .header{
+        letter-spacing: 1.5px;
+        line-height: 2.2rem;
+    }
+    .header span{
+        display: inline-block;
+        margin-left: 40%;
+    }
+}
+
+
+/* --------------------------------- Header End--------------------------------*/
+
+
+/* -------------------------------Projects Start-----------------------------------*/
+
+#projects-section{
+    width: 100%;
+    background-color: rgb(243, 243, 243);
+}
+
+.common-heading{
+    font-family: 'Roboto Mono';
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: 1.8px;
+    color: rgb(59, 59, 59);
+}
+
+.common-heading::after{                         /*Common for projects about me and contact heading*/
+    background-color: #00C899;      
+    height: 3.5px;
+}
+
+.projects-heading-container{
+    text-align: center;
+    margin-top: 30px;
+}
+
+.container{
+    max-width: 840px;
+    margin: 0 auto;
+    border-radius: 19px;
+}
+
+.project{
+    background-color: white;
+    padding: 46px 37px 40px 35px;
+    margin: 0 auto;
+    margin-top: 4rem;
+    width: 100%;
+    border-radius: 19px;
+    display: flex;
+    gap: 15px;
+    min-height: 245px;
+}
+
+.project-image-div{
+    max-width: 370px;
+    height: 230px;
+    margin: 0 auto;
+}
+
+.project-image-div img{
+    width: 100%;
+    height: 98%;
+    object-fit: cover;
+    border-radius: 19px;
+}
+
+.project-description{
+    padding: 3px 6px 3px 6px;
+    line-height: 1.9rem;
+    letter-spacing: 1px;
+}
+
+.project-description h4{
+    margin-top: 5px;
+    margin-right: 6px;
+    font-size: 1.1rem; 
+}
+
+.project-description p{
+    line-height: 1.6rem;
+    letter-spacing: 1.15px;
+    margin-right: 6px;
+}
+
+.center-a-links{
+    margin-top: 2.5rem;
+    width: 100%;
+    text-align: center;
+}
+
+.project-description a{
+    font-size: 15px;
+    background-color: #008c7a;
+    color: white;
+    padding: 8px 8px;
+}
+
+
+@media (max-width: 683px){
+    .project{
+        flex-direction: column;
+        padding: 46px 31px 40px 28px;
+        width: 85%;
+    }
+
+    .project-description{
+        padding: 3px 0px 3px 0px;
+        line-height: 1.9rem;
+        letter-spacing: 1px;
+        text-align: center;
+    }
+
+    .center-a-links{
+        padding-bottom: 1rem;
+    }
+}
+
+/* -------------------------------Projects End-----------------------------------*/
+
+
+/* -------------------------------About section Start-----------------------------------*/
+.aboutme-heading-container{
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.about-section{
+    margin-top: 6rem;
+    /* height: 50vh; */
+}
+
+
+.about-text{
+    
+    max-width: 840px;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 15px;
+    padding: 40px;
+    line-height: 1.7rem;
+    letter-spacing: 1.2px;
+    margin-top: 3.5rem;
+}
+
+@media(max-width: 683px){
+    .about-text{
+        width: 85%;
+    }
+}
+
+
+/* -------------------------------About section End-----------------------------------*/
+
+
+
+
+/* -------------------------------Contact Me Start-----------------------------------*/
+.contact-section{
+    margin-top: 5rem;
+    
+}
+
+
+.contact-me-container{
+    margin-top: 3.5rem;
+    padding: 50px 30px;
+    background-color: white;
+    font-size: .7rem;
+}
+
+#input-name, #email{
+    width: 100%;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid black;
+    padding-bottom: 5px;
+    margin-top: 10px;
+}
+
+.input-div{
+    display: flex;
+    justify-content: space-around;
+    flex-basis: 45%;
+}
+
+.message-div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 30px 0 0 10.6%;
+}
+
+textarea{
+    box-sizing: border-box;
+    width: 90%;
+    padding: 3px;
+    border: none;
+    border-bottom: 1px solid black;
+    outline: none;
+}
+
+.submit-btn-div{
+    width: 100%;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.submit-btn{
+    cursor: pointer;
+    border: transparent;
+    padding: 8px 18px;
+    color: white;
+    font-size: 1.1rem;
+    font-family: 700;
+    background-color: rgb(37, 37, 37);
+}
+
+@media(max-width: 700px){
+    .input-div{
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    #input-name, #email{
+        width: 95%;
+
+    }
+
+    .message-div{
+        margin: 30px 0 0 0;
+    }
+
+    textarea{
+        width: 95%;
+
+    }
+}
+
+
+
+/* -------------------------------Contact Me End-----------------------------------*/
+
+/* -------------------------------Footer-----------------------------------*/
+
+.footer{
+    margin-top: 5rem;
+    background-color: turquoise;
+    padding: 30px;
+    text-align: center;
+}
